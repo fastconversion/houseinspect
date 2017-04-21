@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="@dimen/smallIcon"
+    android:paddingLeft="@dimen/smallIcon"
+    android:id="@+id/content_view_profile"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginTop="@dimen/ediTextPadding"
+        style="@style/TextProfileHeading"
+        android:text="Name"/>
+    <TextView
+        android:id="@+id/textView_profileName"
+        style="@style/TextProfileText"
+        android:text="Name"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/darkGrey"/>
+    <TextView
+        android:layout_marginTop="@dimen/ediTextPadding"
+        style="@style/TextProfileHeading"
+        android:text="Email"/>
+    <TextView
+        android:id="@+id/textView_profileEmail"
+        style="@style/TextProfileText"
+        android:text="Name"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/darkGrey"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/ediTextPadding"
+        style="@style/TextProfileHeading"
+        android:text="Date of Birth"/>
+    <TextView
+        android:id="@+id/textView_profileDOB"
+        style="@style/TextProfileText"
+        android:text="Name"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/darkGrey"/>
+    <TextView
+        android:layout_marginTop="@dimen/ediTextPadding"
+        style="@style/TextProfileHeading"
+        android:text="Mobile"/>
+    <TextView
+        android:id="@+id/textView_profileMobile"
+        style="@style/TextProfileText"
+        android:text="Name"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/darkGrey"/>
+    <TextView
+        android:layout_marginTop="@dimen/ediTextPadding"
+        style="@style/TextProfileHeading"
+        android:text="Company Name"/>
+    <TextView
+        android:id="@+id/textView_profileCompanyName"
+        style="@style/TextProfileText"
+        android:text="Name"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/darkGrey"/>
+    <TextView
+        android:layout_marginTop="@dimen/ediTextPadding"
+        style="@style/TextProfileHeading"
+        android:text="Role"/>
+    <TextView
+        android:id="@+id/textView_profileRole"
+        style="@style/TextProfileText"
+        android:text="Role"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/darkGrey"/>
+
+</LinearLayout>

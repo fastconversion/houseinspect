@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/headerHeight"
+    android:background="@drawable/img_drawer_background"
+    android:orientation="vertical"
+    android:padding="@dimen/smallIcon"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView_header_userImage"
+            android:src="@drawable/ic_drawer_user"
+            android:layout_width="@dimen/imageGrid"
+            android:layout_height="@dimen/imageGrid" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/smallIcon"
+            android:layout_marginStart="@dimen/smallIcon">
+
+            <TextView
+                android:id="@+id/textView_header_username"
+                style="@style/TextLarge"
+                android:textStyle="bold"
+                android:text="USERNAME"
+                android:textColor="@color/whiteColor" />
+
+            <TextView
+                android:id="@+id/textView_header_location"
+                style="@style/TextNormal"
+                android:text="LOCATION"
+                android:textColor="@color/whiteColor" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activity.subItemActivity.formActivity.form.base.FormBaseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_border_dark_grey"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextLarge"
+                android:background="@drawable/img_rect_dark_grey"
+                android:padding="@dimen/ediTextPadding"
+                android:text="Inspection Parameters"
+                android:textColor="@color/whiteColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/ediTextPadding"
+                android:paddingRight="@dimen/ediTextPadding">
+
+                <com.houseinspect.view.InspectionCheckBox
+                    android:id="@+id/inspect_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ediTextPadding"
+                    app:titleInspection="0" />
+
+                <com.houseinspect.view.InspectionCheckBox
+                    android:id="@+id/inspect_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ediTextPadding"
+                    app:titleInspection="0.5" />
+
+                <com.houseinspect.view.InspectionCheckBox
+                    android:id="@+id/inspect_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ediTextPadding"
+                    app:titleInspection="1" />
+
+                <com.houseinspect.view.InspectionCheckBox
+                    android:id="@+id/inspect_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ediTextPadding"
+                    app:titleInspection="Not Visible(NV)" />
+
+                <com.houseinspect.view.InspectionCheckBox
+                    android:id="@+id/inspect_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ediTextPadding"
+                    app:titleInspection="Not Applicable(NA)" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ediTextPadding"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/ediTextPadding"
+                    android:paddingRight="@dimen/ediTextPadding">
+
+                    <TextView
+                        style="@style/TextNormal"
+                        android:layout_gravity="top"
+                        android:layout_weight=".2"
+                        android:text="Measurement"
+                        android:textColor="@color/blackColor" />
+
+                    <EditText
+                        android:id="@+id/editText_baseForm_measurement"
+                        style="@style/EditText.ExtraPadding"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight=".8"
+                        android:background="@drawable/img_black_border"
+                        android:digits="0123456789."
+                        android:gravity="center_vertical"
+                        android:hint="#.##"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:padding="4dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/editText_baseForm_comment"
+                    style="@style/EditText.ExtraPadding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ediTextPadding"
+                    android:layout_marginTop="@dimen/ediTextPadding"
+                    android:background="@drawable/img_black_border"
+                    android:gravity="top|start"
+                    android:hint="Comment"
+                    android:maxLines="4"
+                    android:minLines="3"
+                    android:textColor="@color/blackColor" />
+
+                <TextView
+                    android:id="@+id/textView_prevComment"
+                    android:layout_gravity="right|end"
+                    android:padding="8dp"
+                    android:onClick="openPrevComment"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:text="Previous Comment>"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/imageGrid"
+                        android:layout_height="@dimen/imageGrid"
+                        android:onClick="addStandImage"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_camera" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/imageGrid" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimary"
+                    android:minHeight="0dp"
+                    android:minWidth="0dp"
+                    android:padding="10dp"
+                    android:onClick="onSaveDraft"
+                    android:text="SAVE DRAFT"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/text_size_normal" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

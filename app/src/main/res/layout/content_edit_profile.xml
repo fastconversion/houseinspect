@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="@dimen/smallIcon"
+    android:id="@+id/content_edit_profile"
+    android:paddingLeft="@dimen/smallIcon"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginTop="@dimen/ediTextPadding"
+        style="@style/TextProfileHeading"
+        android:text="Fore Name"/>
+    <EditText
+        android:id="@+id/editText_profileForeName"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:hint="Fore Name"
+        style="@style/EditText.ExtraPadding"/>
+    <TextView
+        android:layout_marginTop="@dimen/ediTextPadding"
+        style="@style/TextProfileHeading"
+        android:text="Sur Name"/>
+    <EditText
+        android:id="@+id/editText_profileSurName"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:hint="Sur Name"
+        style="@style/EditText.ExtraPadding"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/ediTextPadding"
+        style="@style/TextProfileHeading"
+        android:text="Date of Birth"/>
+    <RelativeLayout
+        android:onClick="selectDateOfBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:onClick="selectDateOfBirth"
+            android:id="@+id/textView_profileEditDateOfBirth"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:hint="Date of Birth"
+            style="@style/EditText.ExtraPadding"/>
+        <ImageView
+            android:onClick="selectDateOfBirth"
+            android:src="@drawable/ic_calender"
+            android:layout_width="@dimen/imageGrid"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:scaleType="fitEnd"
+            android:padding="3dp"
+            android:layout_alignBottom="@+id/textView_profileEditDateOfBirth" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/ediTextPadding"
+        style="@style/TextProfileHeading"
+        android:text="Mobile"/>
+    <EditText
+        android:id="@+id/editText_profileMobile"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:hint="Mobile"
+        android:inputType="phone"
+        style="@style/EditText.ExtraPadding"/>
+
+</LinearLayout>

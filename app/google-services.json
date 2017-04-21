@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "155238609695",
+    "firebase_url": "https://houseinspect-ce75c.firebaseio.com",
+    "project_id": "houseinspect-ce75c",
+    "storage_bucket": "houseinspect-ce75c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155238609695:android:882e0b6410182b30",
+        "android_client_info": {
+          "package_name": "com.houseinspect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155238609695-0a5cvh2d45pti5n4j5dg5ulc674kl21o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.houseinspect",
+            "certificate_hash": "DE25A5825F4C4A0512DB01B5D5A420D6945FE1F6"
+          }
+        },
+        {
+          "client_id": "155238609695-1p6ife8a364sig4sladfd2mkelv6i54e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6nUSKNT1_uwkzBCe_AuOPrGxpKtPpoho"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155238609695-1p6ife8a364sig4sladfd2mkelv6i54e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

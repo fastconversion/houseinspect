@@ -1,0 +1,24 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">50dp</dimen>
+    <dimen name="activity_vertical_margin">50dp</dimen>
+
+    <dimen name="text_size_heading">28sp</dimen>
+    <dimen name="text_size_xSmall">13sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">22sp</dimen>
+    <dimen name="editTextImageWidth">40dp</dimen>
+    <dimen name="imageButton">45dp</dimen>
+    <dimen name="splash_icon">300dp</dimen>
+    <dimen name="tile_image">70dp</dimen>
+    <dimen name="ediTextPadding">10dp</dimen>
+    <dimen name="smallIcon">18dp</dimen>
+    <dimen name="imageGrid">100dp</dimen>
+    <dimen name="headerHeight">200dp</dimen>
+    <dimen name="design_navigation_separator_vertical_padding">0dp</dimen>
+    <dimen name="crossIcon">30dp</dimen>
+    <dimen name="imageGridSmall">80dp</dimen>
+</resources>
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:id="@+id/layoutMain"
+    android:background="@drawable/img_item_background">
+    <View
+        android:layout_width="4dp"
+        android:background="@color/textPrimaryDark"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/textView_enrollName"
+            style="@style/TextXLarge"
+            android:textColor="@color/textPrimaryDark"
+            android:text="Demographic"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center"
+        android:tint="@color/textPrimaryDark"
+        android:src="@drawable/ic_next"/>
+
+</LinearLayout>

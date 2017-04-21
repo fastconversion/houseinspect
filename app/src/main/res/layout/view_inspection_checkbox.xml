@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/ediTextPadding"
+    android:paddingRight="@dimen/ediTextPadding">
+    <TextView
+        android:id="@+id/textView_inspectionParameterName"
+        android:layout_weight=".2"
+        style="@style/TextNormal"
+        android:layout_gravity="center"
+        android:textColor="@color/blackColor"
+        android:text="INSPECTION PARAMETER"/>
+    <FrameLayout
+        android:layout_weight=".8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView_InspectionBackCheck"
+            android:padding="4dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_black_border"/>
+        <ImageView
+            android:visibility="invisible"
+            android:src="@drawable/ic_primary_tick"
+            android:paddingBottom="6dp"
+            android:id="@+id/imageView_InspectionFrontCheck"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    android:background="@drawable/background"
+    tools:context=".activity.subItemActivity.formActivity.main.HomeOwnerDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+            <!--First Name-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="First Name"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_homeOwner_firstName"
+                style="@style/EditText.ExtraPadding"
+                android:hint="First Name"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <!--Last Name-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Last Name"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_homeOwner_LastName"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Last Name"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <!--ID Number QR code scanner-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="ID Number (ID Bar code/QR code)"
+                android:textColor="@color/blackColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_grey_border_rect"
+                android:onClick="openScanner"
+                android:orientation="horizontal"
+                android:padding="@dimen/ediTextPadding">
+
+                <TextView
+                    android:id="@+id/textView_homeOwner_scanCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Select Province"
+                    android:textColor="@color/blackColor"
+                    android:textColorHint="@color/hintGrey"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <ImageView
+                    android:layout_width="@dimen/smallIcon"
+                    android:layout_height="@dimen/smallIcon"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_barcode" />
+            </LinearLayout>
+            <!--Mobile Number -->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Mobile Number"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_homeOwner_mobile"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <!--Gender User Radio b-->
+
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Gender"
+                android:textColor="@color/blackColor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_homeOwner_Gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Male"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/text_size_small" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="Female"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/text_size_small" />
+            </RadioGroup>
+            <!--Nationality SA citizens Non-SA citizens radio-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Nationality"
+                android:textColor="@color/blackColor" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_homeOwner_Nationality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton_saCitizen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="SA Citizens"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/text_size_small" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_nonSaCitizen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="Non SA citizens"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/text_size_small" />
+            </RadioGroup>
+            <!--Race drop down-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Race"
+                android:textColor="@color/blackColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_grey_border_rect"
+                android:onClick="openRaceList"
+                android:orientation="horizontal"
+                android:padding="@dimen/ediTextPadding">
+
+                <TextView
+                    android:id="@+id/textView_homeOwner_race"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Select Race"
+                    android:textColor="@color/blackColor"
+                    android:textColorHint="@color/hintGrey"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <ImageView
+                    android:layout_width="@dimen/smallIcon"
+                    android:layout_height="@dimen/smallIcon"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+            <!--Date of birth popup-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Date of birth"
+                android:textColor="@color/blackColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_grey_border_rect"
+                android:onClick="openCalender"
+                android:orientation="horizontal"
+                android:padding="@dimen/ediTextPadding">
+
+                <TextView
+                    android:id="@+id/textView_homeOwner_Date_of_birth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date of Birth"
+                    android:textColor="@color/blackColor"
+                    android:textColorHint="@color/hintGrey"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <ImageView
+                    android:layout_width="@dimen/smallIcon"
+                    android:layout_height="@dimen/smallIcon"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_calender" />
+            </LinearLayout>
+            <!--Living People Information-->
+            <!--Family Income_homeOwner_-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Family Income"
+                android:textColor="@color/blackColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_grey_border_rect"
+                android:onClick="openFamilyIncome"
+                android:orientation="horizontal"
+                android:padding="@dimen/ediTextPadding">
+
+                <TextView
+                    android:id="@+id/textView_homeOwner_Family_Income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Select Family Income"
+                    android:textColor="@color/blackColor"
+                    android:textColorHint="@color/hintGrey"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <ImageView
+                    android:layout_width="@dimen/smallIcon"
+                    android:layout_height="@dimen/smallIcon"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="15dp"
+                    android:text="No. of People Living"
+                    android:textColor="@color/blackColor" />
+
+                <TextView
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="right|end"
+                    android:onClick="onAddMorePeople"
+                    android:text="Add People"
+                    android:textColor="@color/textPrimaryDark" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="RESET"
+                    android:onClick="onHouseReset"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/text_size_normal" />
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:onClick="onSaveDraft"
+                android:text="SAVE DRAFT"
+                android:textAllCaps="true"
+                android:textColor="@color/whiteColor" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

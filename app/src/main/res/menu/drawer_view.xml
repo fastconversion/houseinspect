@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/aks5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_NonSubHouse"
+            android:icon="@drawable/ic_non_subsidy"
+            android:title="Non Subsidy House" />
+    </group>
+    <group
+        android:id="@+id/aks6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_SubHouse"
+            android:icon="@drawable/ic_subsidy_enrolment"
+            android:title="Subsidy House" />
+    </group>
+
+    <item android:title="Re-Inspection">
+        <menu>
+        <item
+            android:id="@+id/nav_reInspect_nonSub"
+            android:icon="@drawable/ic_non_subsidy"
+            android:title="Non Subsidy House"/>
+        <item
+            android:id="@+id/nav_reInspect_sub"
+            android:icon="@drawable/ic_subsidy_enrolment"
+            android:title="Subsidy House"/>
+        </menu>
+    </item>
+
+    <group
+        android:id="@+id/aks2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_update_profile"
+            android:icon="@drawable/ic_update_profile"
+            android:title="Update Profile" />
+    </group>
+    <group
+        android:id="@+id/aks3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_changePassword"
+            android:icon="@drawable/ic_change_password"
+            android:title="Change Password" />
+    </group>
+    <group
+        android:id="@+id/aks1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_abouts"
+            android:title="About Us" />
+    </group>
+    <group
+        android:id="@+id/aks4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+    </group>
+</menu>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    android:background="@drawable/background"
+    tools:context=".activity.subItemActivity.formActivity.main.DemographicDetailActivity">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+            <!--Province drop down -->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:text="Province"
+                android:textColor="@color/blackColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_grey_border_rect"
+                android:onClick="openDropDownProvince"
+                android:orientation="horizontal"
+                android:padding="@dimen/ediTextPadding">
+
+                <TextView
+                    android:id="@+id/textView_demoGraphic_Province"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Select Province"
+                    android:textColor="@color/blackColor"
+                    android:textColorHint="@color/hintGrey"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <ImageView
+                    android:layout_width="@dimen/smallIcon"
+                    android:layout_height="@dimen/smallIcon"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+            <!-- Township/Village edit text -->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Township/Village"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_townVillage"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Village Name"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <!-- Extension edit text -->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Extension"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_Extension"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Extension"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <!-- Ward edit text -->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Ward"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_Ward"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Ward"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <!-- Street Name edit Text -->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Street Name"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_Street_Name"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Street Name"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <!-- Stand Name  edit Text -->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Stand Number"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_Stand_Name"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Stand Number"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:padding="10dp"
+                    android:onClick="addStandImage"
+                    android:layout_width="@dimen/imageGrid"
+                    android:layout_height="@dimen/imageGrid"
+                    android:src="@drawable/ic_camera" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/imageGrid" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="House Number"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_houseNumber"
+                style="@style/EditText.ExtraPadding"
+                android:hint="House Number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/textView_demographic_houseSubsidyTag"
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Subsidy Type"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_houseSubsidyType"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Subsidy Type"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <!--Development Name Edit Text-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Development Name"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_Development_Name"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Street Name"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <!--Regd. Home Builder Name edit text-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Regd. Home Builder Name"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_Regd_Home_Builder_Name"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Regd. Home Builder Name"
+                android:maxLines="1"
+                android:singleLine="true" />
+            <!--Home Builder Reg. Number edit text-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Home Builder Reg. Number"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_Home_Builder_Reg_Number"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Home Builder Reg. Number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp">
+
+                <FrameLayout
+                    android:visibility="gone"
+                    android:id="@+id/layout_builderRegImage"
+                    android:orientation="vertical"
+                    android:layout_width="@dimen/imageGrid"
+                    android:layout_height="@dimen/imageGrid">
+
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:background="@color/headingText"
+                        android:padding="1dp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/imageView_imageGrid_BuilderRegImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:onClick="removeBuilderRegImage"
+                        android:src="@drawable/ic_remove"
+                        android:layout_width="@dimen/crossIcon"
+                        android:layout_height="@dimen/crossIcon"
+                        android:layout_gravity="right|top" />
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/button_builderRegImage"
+                    android:padding="10dp"
+                    android:onClick="addHomeBuilderRegImage"
+                    android:layout_width="@dimen/imageGrid"
+                    android:layout_height="@dimen/imageGrid"
+                    android:src="@drawable/ic_camera" />
+
+            </FrameLayout>
+            <!--Home builder Tel Number Edit Text-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Home builder Tel Number"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_Home_builder_Tel_Number"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Home builder Tel Number"
+                android:maxLines="1"
+                android:inputType="phone"
+                android:singleLine="true" />
+            <!--Enrollment No. Edit Text-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Enrollment No."
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_Enrollment_No"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Enrollment No."
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp">
+
+                <FrameLayout
+                    android:id="@+id/layout_EnrollmentImage"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_width="@dimen/imageGrid"
+                    android:layout_height="@dimen/imageGrid">
+
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:background="@color/headingText"
+                        android:padding="1dp"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/imageView_imageGrid_EnrollmentImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:onClick="removeEnrollmentImage"
+                        android:src="@drawable/ic_remove"
+                        android:layout_width="@dimen/crossIcon"
+                        android:layout_height="@dimen/crossIcon"
+                        android:layout_gravity="right|top" />
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/button_EnrollmentImage"
+                    android:padding="10dp"
+                    android:onClick="addEnrollmentImage"
+                    android:layout_width="@dimen/imageGrid"
+                    android:layout_height="@dimen/imageGrid"
+                    android:src="@drawable/ic_camera" />
+            </FrameLayout>
+            <!--Unit Number-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="Unit Number"
+                android:textColor="@color/blackColor" />
+
+            <EditText
+                android:id="@+id/editText_demographic_Unit_Number"
+                style="@style/EditText.ExtraPadding"
+                android:hint="Unit Number"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <!--Gps Co-ordinate-->
+            <TextView
+                style="@style/TextNormal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:text="GPS Co-ordinates"
+                android:textColor="@color/blackColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_grey_border_rect"
+                android:onClick="openGPSService"
+                android:orientation="horizontal"
+                android:padding="@dimen/ediTextPadding">
+
+                <TextView
+                    android:id="@+id/textView_demoGraphic_GPS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="GPS Co-ordinates"
+                    android:textColor="@color/blackColor"
+                    android:textColorHint="@color/hintGrey"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <ImageView
+                    android:layout_width="@dimen/smallIcon"
+                    android:layout_height="@dimen/smallIcon"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_satelite" />
+            </LinearLayout>
+            <!--Signature-->
+            <!--Reset-->
+            <!--Save Draft-->
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RESET"
+                    android:onClick="onFormReset"
+                    android:textColor="@color/blackColor"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <Button
+                android:onClick="onSaveDraft"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SAVE DRAFT"
+                android:textAllCaps="true"
+                android:textColor="@color/whiteColor"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

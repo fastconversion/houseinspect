@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="InspectionCheckBox">
+        <attr name="titleInspection" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="20dp"
+    android:layout_height="wrap_content">
+    <TextView
+        style="@style/TextNormal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="House Member Name"
+        android:textColor="@color/blackColor" />
+
+    <EditText
+        android:id="@+id/editText_familyMemberName"
+        style="@style/EditText.ExtraPadding"
+        android:hint="House Member Name"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <TextView
+        style="@style/TextNormal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp"
+        android:text="House Member Age"
+        android:textColor="@color/blackColor" />
+
+    <EditText
+        android:id="@+id/editText_editText_familyMemberAge"
+        style="@style/EditText.ExtraPadding"
+        android:hint="House Member Age"
+        android:maxLines="1"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:singleLine="true" />
+    <Button
+        android:id="@+id/button_addMember"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:padding="8dp"
+        android:text="Add Member"
+        android:layout_gravity="end|right"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/whiteColor"/>
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.houseinspect">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+
+
+    <application
+        android:name=".HouseInspectApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.mainactivity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activity.mainactivity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activity.mainactivity.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activity.mainactivity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activity.mainactivity.SignatureActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activity.mainactivity.HouseNewEditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.subItemActivity.formActivity.main.DemographicDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.subItemActivity.formActivity.main.HomeOwnerDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.subItemActivity.formActivity.main.InspectionCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.subItemActivity.formActivity.main.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.subItemActivity.formActivity.form.InspectionFormActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.subItemActivity.formActivity.form.base.FormBaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mainactivity.HouseEnrolledActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="329ab6732f78d186654f0b7b30317a5d1b06a76c" />
+
+        <activity
+            android:name=".activity.subItemActivity.formActivity.main.PreviousCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.mainactivity.SeniorInspectorConfirmationActivity" />
+        <activity
+            android:name=".activity.mainactivity.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DesignAppThemeNoActionBar" />
+        <activity
+            android:name=".activity.mainactivity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.mainactivity.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".notification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notification.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".notification.FCMIdUpdateService"
+            android:exported="false" />
+
+        <receiver android:name=".DummyBroadcast" />
+
+        <activity android:name=".activity.mainactivity.CompanySearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+    </application>
+
+</manifest>
